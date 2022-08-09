@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js" integrity="sha512-v8B8T8l8JiiJRGomPd2k+bPS98RWBLGChFMJbK1hmHiDHYq0EjdQl20LyWeIs+MGRLTWBycJGEGAjKkEtd7w5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/CustomEase.min.js" integrity="sha512-qZv4ep+dIQYT+4NhYpMYZwICt4rGGMZrIEZehPCUNY6T9qesoAnzqgNJgU3sWnnvaoz9MfbsUROtHv9WeSqd1Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script></script>
+
+    <!-- jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"> </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Splitting text -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
+
+    <!-- Page Title -->
+    <title>Moovy</title>
+</head>
+<body data-barba="wrapper">
+
+    <!-- Cursor -->
+    <div class="cursor cursor-small diff"></div>
+    <canvas class="cursor cursor-canvas diff" resize></canvas>
+
+    <div id="preloader" class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div id="welcome" class="d-flex justify-content-center align-items-center">
+                    <div id="hi" class="text24 weight-800 white noselect text-center position-absolute">
+                        Hi!
+                    </div>
+                    <div id="imntq" class="text24 weight-800 white noselect text-center position-absolute">
+                        I'm Nguyen Tien Quang
+                    </div>
+                    <div id="percent" class="text100 weight-800 text-center white text-decoration-line-through noselect position-absolute">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="c-loader js-loader">
+        <div class="c-loader__mask js-loader__mask">
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div data-barba="container" data-barba-namespace="moovy">
+        <div id="container" data-scroll-container>
+            <!-- Nav bar -->
+            <subnav class="diff">
+                <div class="nav-buttons">
+                    <a id="back-btn" class="text16 weight-700 white texthover left-align hover-this text-uppercase" href="./">
+                        <span>←ㅤGo back</span>
+                    </a>
+                    <a class="button button--anthe text16 white weight-700 hover-this" href="https://www.figma.com/proto/3RYwRFVO9HfzWKXcxNZUaZ/Moovy-Final?page-id=0%3A1&node-id=2%3A2&viewport=242%2C48%2C0.07&scaling=scale-down&starting-point-node-id=2%3A2&show-proto-sidebar=1" target="_blank">
+                        <span>Visit the prototypeㅤ→</span>
+                    </a>
+                </div>
+                <div id="title" class="text100 weight-800 white textoutline">
+                    <span id="title-inner">
+                        Moovy
+                    </span>
+                </div>
+            </subnav>
+            <!-- Main -->
+            <div id="main" class="container-fluid site-main" data-scroll-section>
+                <!-- Section 1 -->
+                <section id="overview" class="section spc-4">
+                    <div class="row">
+                        <div id="project-header" class="col-12">
+                            <div id="project-type" class="spc-1">
+                                <span class="text16 weight-800 white text-uppercase">Personal project</span>
+                            </div>
+                            <div id="tags" class="text12 weight-800 text-uppercase white spc-3">
+                                <img src="./images/horizontal-star.svg" alt="">
+                                <boxed> <span>UI</span> </boxed>
+                                <boxed> <span>UX</span> </boxed>
+                                <boxed> <span>app</span> </boxed>
+                                <boxed> <span>mobile</span> </boxed>
+                                <boxed> <span>figma</span> </boxed>
+                                <img src="./images/horizontal-star.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="title-line"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2 -->
+                <section id="information" class="section">
+                    <div class="row spc-3">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="text16 weight-800 white">•ㅤㅤAbout Moovy</div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="text24 weight-400 white">
+                                <span>ㅤㅤㅤㅤㅤToday, the number of children suffering from psychological problems (specifically autism and depression) is increasing, parents also spend more time at work, less connected with their children. Children with autism and depression also have their own interests and entertainment needs, watching movies & TV shows on smartphones is one of them. Children with autism or depression often have a very limited number of interests. However, at present, there is no application that meets the limit of content selection suitable for children and helps parents monitor their children. Moovy was created to solve that problem.</span>
+                                <br>
+                                <br>
+                                <span>ㅤㅤㅤㅤㅤMoovy is an application that helps parents manage their children watching videos online, specifically for children with autism and depression. There, parents can rest assured that their children can use them while still being able to monitor, supervise and manage them; The application also supports children to express their interests, thoughts, and love.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row spc-3">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="text16 weight-800 white">•ㅤㅤFunctions</div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="text24 weight-400 white">
+                                <span>ㅤㅤㅤㅤㅤParents can choose to limit the genres of video displayed, excluding inappropriate content as soon as they create an account for their child.</span>
+                                <br>
+                                <br>
+                                <span>ㅤㅤㅤㅤㅤMoovy plays videos, movies, and TV shows with permission and remote parental control. Every time they want to watch a video, the child will send a request to the parent's device, after reviewing the video content, the parent will decide whether to let the child watch it or not.</span>
+                                <br>
+                                <br>
+                                <span>ㅤㅤㅤㅤㅤThrough watching and giving hearts to videos, along with friendly greetings, congratulatory words and recognition of results after watching the video, children can get acquainted, learn more about communication, language, social relations, expressing love,...</span>
+                                <br>
+                                <br>
+                                <span>ㅤㅤㅤㅤㅤThe application also has statistical functions such as: charts of genres, movies, TV shows children watch by total viewing time or total hearts; The category of videos that children tend to like increases and decreases the most; ... through which parents, psychologists, and doctors can better understand and follow changes in children's interests, helping them easier to treat, talk to, and share with their child.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row spc-3">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="text16 weight-800 white">•ㅤㅤTarget users</div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="text24 weight-400 white">
+                                <span>ㅤㅤㅤㅤㅤ- Autistic or depressed child (~10 years younger) and their parents.</span>
+                                <br>
+                                <span>ㅤㅤㅤㅤㅤAt this age, children are still under parental control.</span>
+                                <br>
+                                <span>ㅤㅤㅤㅤㅤ- Children who have a hobby of watching movies and TV shows need a video viewing platform with appropriate content.</span>
+                                <br>
+                                <span>ㅤㅤㅤㅤㅤ- Parents who want to spend time watching online videos with their children.</span>
+                                <br>
+                                <span>ㅤㅤㅤㅤㅤ- Parents have to spend a lot of time at work but want to observe and monitor their children's interests.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row spc-3">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="text16 weight-800 white">•ㅤㅤTarget users - User personas</div>
+                        </div>
+                        <div class="col-lg-9 col-md-12 spc-2">
+                            <div class="text24 weight-800 white text-uppercase text-decoration-underline spc-1">
+                                <span>ㅤㅤㅤㅤㅤParents</span>
+                            </div>
+                            <img class="detail-img" src="./images/moovy/1.jpg" alt="">
+                        </div>
+
+                        <div class="col-lg-9 offset-lg-3 col-md-12 offset-md-0 spc-2">
+                            <div class="text24 weight-800 white text-uppercase text-decoration-underline spc-1">
+                                <span>ㅤㅤㅤㅤㅤAutistic girl</span>
+                            </div>
+                            <img class="detail-img" src="./images/moovy/2.jpg" alt="">
+                        </div>
+
+                        <div class="col-lg-9 offset-lg-3 col-md-12 offset-md-0 spc-2">
+                            <div class="text24 weight-800 white text-uppercase text-decoration-underline spc-1">
+                                <span>ㅤㅤㅤㅤㅤDepressed boy</span>
+                            </div>
+                            <img class="detail-img" src="./images/moovy/3.jpg" alt="">
+                        </div>
+                        
+                    </div>
+
+                    <div class="row spc-3">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="text16 weight-800 white">•ㅤㅤProblems statement</div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 spc-2">
+                            <div class="text24 weight-800 white text-uppercase text-decoration-underline spc-1">
+                                <span>ㅤㅤㅤㅤㅤParents</span>
+                            </div>
+                            <div class="text24 weight-400 white">
+                                <span>ㅤㅤㅤㅤㅤParents of children with autism or depression need a suitable video streaming platform to watch with their children or follow interests, creating more opportunities to share and talk with their children.</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-0">
+                            <div class="text24 weight-800 white text-uppercase text-decoration-underline spc-1">
+                                <span>ㅤㅤㅤㅤㅤChildren</span>
+                            </div>
+                            <div class="text24 weight-400 white">
+                                <span>ㅤㅤㅤㅤㅤChildren with autism or depression don't have user-friendly video streaming apps that match their interests.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row spc-3">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="text16 weight-800 white">•ㅤㅤSolution statement</div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 spc-2">
+                            <div class="text24 weight-800 white text-uppercase text-decoration-underline spc-1">
+                                <span>ㅤㅤㅤㅤㅤParents</span>
+                            </div>
+                            <div class="text24 weight-400 white">
+                                <span>ㅤㅤㅤㅤㅤThe mobile application gives parents peace of mind to let their children watch videos, watch videos with their children without having to worry about inappropriate content, with other functions to help them understand and follow their children's interests.</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 offset-lg-3 col-md-6 offset-md-0">
+                            <div class="text24 weight-800 white text-uppercase text-decoration-underline spc-1">
+                                <span>ㅤㅤㅤㅤㅤChildren</span>
+                            </div>
+                            <div class="text24 weight-400 white">
+                                <span>ㅤㅤㅤㅤㅤFriendly mobile application, with content suitable for children's interests, along with functions to motivate, encourage and support children to express their love.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="detail-images" class="section">
+                    <div class="row position-relative">
+                        <div class="col-lg-3 col-md-12">
+                            <div class="text16 weight-800 white">•ㅤㅤSome screens</div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 offset-md-0 up-4" data-scroll data-scroll-speed="3">
+                            <img src="./images/moovy/4.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 offset-lg-6 col-md-12 offset-md-0 up-40" data-scroll data-scroll-speed="12">
+                            <img src="./images/moovy/5.jpg" alt="">
+                        </div>
+                        <div class="col-lg-5 offset-lg-3 col-md-12 offset-md-0 up-12" data-scroll data-scroll-speed="2">
+                            <img src="./images/moovy/6.jpg" alt="">
+                        </div>
+                        <div class="col-lg-4 offset-lg-6 col-md-12 offset-md-0 up-16" data-scroll data-scroll-speed="6">
+                            <img src="./images/moovy/7.jpg" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section id="bottom-work">
+                    <div class="project-images">
+                        <img src="./images/work/aboo-img.jpg" alt="aboo">
+                        <img src="./images/work/sansha-img.jpg" alt="sansha">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a class="text60 weight-800 textoutline hover-this" href="./aboo.html" data-label="aboo">
+                                <span>
+                                    ←ㅤABoo
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-6 d-flex flex-row justify-content-end">
+                            <a class="text60 weight-800 textoutline hover-this" href="./sansha.html" data-label="sansha">
+                                <span>
+                                    Sanshaㅤ→
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- Tilt effect -->
+    <script type="text/javascript" src="./js/vanilla-tilt.min.js"></script>
+
+    <!-- Locomotive scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js" integrity="sha256-odlNpseyKe/Yr2FVkKfof6CSj8+edbarxw5hDpqCGBE=" crossorigin="anonymous"></script>
+
+    <!-- Cursor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-core.min.js" integrity="sha512-n8kxMM6jgawwNHl1HJmOXz+l8bMYaq0SrYrbCijlUnUUNXuD4ajzKmdXSTFarH3PViz54jfiSNUUAfTOhIDmRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="./js/simplex-noise.min.js"></script>
+    <script type="text/javascript" src="./js/cursor.js"></script>
+
+    <!-- Page transition -->
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+
+    <!-- Splitting text -->
+    <script type="text/javascript" src='https://unpkg.com/splitting/dist/splitting.min.js'></script>
+
+    <!-- Splitting text line -->
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.1/umd/index.min.js" integrity="sha256-+tyo0EBmNXbM5h5z8yiuoJR+Hk+CQiC2okudM2xImig=" crossorigin="anonymous"></script>
+
+    <!-- General Animation -->
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
