@@ -110,7 +110,7 @@ function initPageTransitions() {
                 // animate loading screen in
                 pageTransitionIn(data.current);
                 await delay(1000);
-                data.current.container.remove();
+//                 data.current.container.remove();
             },
             async enter(data) {
                 // animate loading screen away
