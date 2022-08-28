@@ -12,7 +12,7 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-backup.css">
 
     <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
@@ -62,7 +62,8 @@
                     <div id="imntq" class="text24 weight-800 white noselect text-center position-absolute">
                         I'm Nguyen Tien Quang
                     </div>
-                    <div id="percent" class="text100 weight-800 text-center white text-decoration-line-through noselect position-absolute">
+                    <div id="percent"
+                        class="text100 weight-800 text-center white text-decoration-line-through noselect position-absolute">
                         0
                     </div>
                 </div>
@@ -79,46 +80,46 @@
     </div>
 
     <!-- Container -->
-    <div data-barba="container" data-barba-namespace="home">
+    <div id="barba" data-barba="container" data-barba-namespace="home">
 
         <div id="container" data-scroll-container>
-            <!-- Navbar -->
-            <nav class="diff">
-                <a id="logo" class="bigtilt hover-this" href="./">
-                    <span> <img src="images/logo.svg" alt=""> </span>
-                </a>
-                <div id="bottomright">
-                    <span> <img src="images/sign.svg" alt=""> </span>
-                </div>
-                <ul id="menu-link">
-                    <span>
-                        <li>
-                            <a class="text16 weight-500 white texthover right-align hover-this" href="#about"
-                                data-scroll-to> About </a>
-                        </li>
-                        <li>
-                            <a class="text16 weight-500 white texthover right-align hover-this" href="#work"
-                                data-scroll-to> Works </a>
-                        </li>
-                        <li>
-                            <a class="text16 weight-500 white texthover right-align hover-this" href="#contact"
-                                data-scroll-to> Contact </a>
-                        </li>
-                    </span>
-                </ul>
-                <div id="bottomleft" class="text16 weight-500 white noselect">
-                    <span>
-                        <div>
-                            Nguyen Tien Quang
-                        </div>
-                        <div>
-                            UX/UI designer
-                        </div>
-                    </span>
-                </div>
-            </nav>
             <!-- Main -->
             <div id="main" class="container-fluid site-main" data-scroll-section>
+                <!-- Navbar -->
+                <nav class="diff" data-scroll data-scroll-sticky data-scroll-target="#barba">
+                    <a id="logo" class="bigtilt hover-this" href="./">
+                        <span> <img src="images/logo.svg" alt=""> </span>
+                    </a>
+                    <div id="bottomright">
+                        <span> <img src="images/sign.svg" alt=""> </span>
+                    </div>
+                    <ul id="menu-link">
+                        <span>
+                            <li>
+                                <a class="text16 weight-500 white texthover right-align hover-this" href="#about"
+                                    data-scroll-to> About </a>
+                            </li>
+                            <li>
+                                <a class="text16 weight-500 white texthover right-align hover-this" href="#work"
+                                    data-scroll-to> Works </a>
+                            </li>
+                            <li>
+                                <a class="text16 weight-500 white texthover right-align hover-this" href="#contact"
+                                    data-scroll-to> Contact </a>
+                            </li>
+                        </span>
+                    </ul>
+                    <div id="bottomleft" class="text16 weight-500 white noselect">
+                        <span>
+                            <div>
+                                Nguyen Tien Quang
+                            </div>
+                            <div>
+                                UX/UI designer
+                            </div>
+                        </span>
+                    </div>
+                </nav>
                 <!-- Section 1 -->
                 <section id="hero" class="section">
                     <div class="row">
@@ -672,7 +673,7 @@
         integrity="sha256-+tyo0EBmNXbM5h5z8yiuoJR+Hk+CQiC2okudM2xImig=" crossorigin="anonymous"></script>
 
     <!-- General Animation -->
-    <script defer="defer" type="text/javascript" src="js/main.js"></script>
+    <script defer="defer" type="text/javascript" src="js/main-backup.js"></script>
 </body>
 
 </html>
