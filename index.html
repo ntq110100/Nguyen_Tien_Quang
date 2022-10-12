@@ -12,7 +12,7 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-backup.css">
 
     <!-- GSAP & ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
@@ -133,7 +133,7 @@
                                     for user experience and interface design. </div>
                             </div>
                         </div>
-                        <img id="ntq" class="bg" src="images/ntq.png" alt="">
+                        <img id="ntq" class="bg lazy" src="images/ntq.png" data-src="images/ntq.png" alt="">
                     </div>
                 </section>
 
@@ -207,11 +207,11 @@
                     </div>
 
                     <div class="project-images">
-                        <img src="images/work/wiibike-img.jpg" alt="wiibike">
-                        <img src="images/work/aboo-img.jpg" alt="aboo">
-                        <img src="images/work/moovy-img.jpg" alt="moovy">
-                        <img src="images/work/sansha-img.jpg" alt="sansha">
-                        <img src="images/work/practices-img.jpg" alt="practices">
+                        <img class="lazy" src="images/work/wiibike-img.jpg" data-src="images/work/wiibike-img.jpg" alt="wiibike">
+                        <img class="lazy" src="images/work/aboo-img.jpg" data-src="images/work/aboo-img.jpg" alt="aboo">
+                        <img class="lazy" src="images/work/moovy-img.jpg" data-src="images/work/moovy-img.jpg" alt="moovy">
+                        <img class="lazy" src="images/work/sansha-img.jpg" data-src="images/work/sansha-img.jpg" alt="sansha">
+                        <img class="lazy" src="images/work/practices-img.jpg" data-src="images/work/practices-img.jpg" alt="practices">
                     </div>
 
                     <a class="project hover-this" href="./wiibike.html" data-color="#2167FF" data-label="wiibike">
@@ -594,20 +594,14 @@
                             <div class="text160 weight-800 textoutline">come true</div>
                         </div>
 
-                        <div id="say-hi" class="col-lg-2 col-md-12">
-                            <div class="text16 weight-500 text-uppercase">
-                                <span>Say “hi”</span>
-                            </div>
-                        </div>
-
                         <div class="col-lg-1 col-md-12">
                             <img id="contact-arrow" src="images/arrow.svg" alt="">
                         </div>
                     </div>
 
                     <div id="contact-email" class="row">
-                        <div class="col-lg-5 offset-lg-7 col-md-12 offset-md-0 position-relative">
-                            <div class="text16 weight-500 white text-uppercase">to my work email</div>
+                        <div id="contact-email-inner" class="col-lg-5 offset-lg-7 col-md-12 offset-md-0 position-relative">
+                            <div class="text16 weight-500 white text-uppercase">Say “hi” to me</div>
                             <div class="d-flex flex-column justify-content-center dwn-6">
                                 <a class="text60 weight-800 white texthover-rev hover-this diff text-uppercase text-decoration-line-through position-absolute"
                                     style="z-index: 10;" href="mailto:ntq110100@gmail.com">
@@ -620,25 +614,25 @@
                     </div>
 
                     <div id="contact-bottom" class="row">
-                        <div id="author" class="col-lg-2 offset-lg-3 col-md-2 offset-md-3 diff">
+                        <div id="author" class="col-lg-2 offset-lg-3 col-md-3 offset-md-3 diff">
                             <div class="text16 weight-500 white noselect">
                                 Designed & Developed by NTQ
                                 <br>
                                 NTQ © 2022
                             </div>
                         </div>
-                        <div id="social" class="col-lg-3 offset-lg-2 col-md-3 offset-md-2 diff">
-                            <a class="text40 weight-800 white text-decoration-line-through texthover-rev hover-this"
+                        <div id="social" class="col-lg-3 offset-lg-2 col-md-3 offset-md-0 diff">
+                            <a class="text40 weight-700 white text-decoration-line-through texthover hover-this"
                                 href="https://www.behance.net/ntq1101" target="_blank">
                                 Behance
                             </a>
                             <br>
-                            <a class="text40 weight-800 white text-decoration-line-through texthover-rev hover-this"
+                            <a class="text40 weight-700 white text-decoration-line-through texthover hover-this"
                                 href="https://www.instagram.com/ntq110100/" target="_blank">
                                 Instagram
                             </a>
                             <br>
-                            <a class="text40 weight-800 white text-decoration-line-through texthover-rev hover-this"
+                            <a class="text40 weight-700 white text-decoration-line-through texthover hover-this"
                                 href="tel:+84944379096" target="_blank">
                                 Telephone
                             </a>
@@ -672,7 +666,7 @@
     <script src="https://unpkg.com/split-type"></script>
 
     <!-- General Animation -->
-    <script defer="defer" type="text/javascript" src="js/main.js"></script>
+    <script defer="defer" type="text/javascript" src="js/main-backup.js"></script>
 </body>
 
 </html>
